@@ -15,4 +15,18 @@ public class Hotel {
     public void addRooms(Room room) {
         this.rooms.add(room);
     }
+
+    public void addGuest(Guest guest, Room room) {
+        room.addGuest(guest);
+    }
+
+    public void removeGuest(Guest guest, Room room) {
+        for(Guest person : room.getGuests()) {
+            if(person == guest){
+                room.getGuests().remove(guest);
+                return;
+            }
+        }
+
+    }
 }

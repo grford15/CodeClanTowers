@@ -8,12 +8,16 @@ public abstract class Room  {
         this.guests = new ArrayList<Guest>();
     }
 
-    public int getGuests() {
+    public int getNumberOfGuests() {
         return this.guests.size();
     }
 
     public void addGuest(Guest guest){
         this.guests.add(guest);
+    }
+
+    public ArrayList<Guest> getGuests(){
+        return this.guests;
     }
 
 }
