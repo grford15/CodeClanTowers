@@ -58,6 +58,6 @@ public class TestHotel {
         hotel.addRooms(bedroom1);
         hotel.addRooms(bedroom2);
         hotel.addGuest(guest1, bedroom1);
-        assertEquals(bedroom2.getRoomType(), hotel.availableRooms());
+        assertEquals(1, hotel.availableRooms().size());
     }
 }

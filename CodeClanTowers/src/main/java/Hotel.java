@@ -30,10 +30,11 @@ public class Hotel {
 
     }
 
-    public String availableRooms() {
+    public ArrayList<Room> availableRooms() {
+        ArrayList emptyRooms = new ArrayList();
         for(Room bedroom : this.rooms)
-            if (bedroom.getNumberOfGuests() < 1) {
-                return ((Bedroom) bedroom).getRoomType();
+            if (bedroom.getNumberOfGuests() == 0) {
+                emptyRooms.add(bedroom);
             }
-        return "No available rooms";}
+        return emptyRooms;}
 }
