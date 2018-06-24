@@ -19,11 +19,11 @@ public class TestHotel {
     @Before
     public void setUp() throws Exception {
         hotel = new Hotel();
-        bedroom1 = new Bedroom(401, RoomType.DOUBLE);
-        bedroom2 = new Bedroom(402, RoomType.TWIN);
-        bedroom3 = new Bedroom(403, RoomType.DELUXE);
-        conferenceRoom1 = new ConferenceRoom("Wu Tang", 100);
-        conferenceRoom2 = new ConferenceRoom("Eazy-E", 80);
+        bedroom1 = new Bedroom(401, RoomType.DOUBLE, 2);
+        bedroom2 = new Bedroom(402, RoomType.TWIN, 2);
+        bedroom3 = new Bedroom(403, RoomType.DELUXE, 5);
+        conferenceRoom1 = new ConferenceRoom("Wu Tang", 100, 100);
+        conferenceRoom2 = new ConferenceRoom("Eazy-E", 80, 100);
         guest1 = new Guest("Greg", 200);
         guest2 = new Guest("Chloe", 150);
     }
@@ -43,13 +43,21 @@ public class TestHotel {
     @Test
     public void hotelCanAddGuestToRoom() {
         hotel.addGuest(guest1, bedroom1);
-        assertEquals(1, bedroom1.getGuests());
+        assertEquals(1, bedroom1.getNumberOfGuests());
     }
 
     @Test
     public void hotelCanRemoveGuest() {
         hotel.addGuest(guest1, bedroom1);
         hotel.removeGuest(guest1, bedroom1);
-        assertEquals(0, bedroom1.getGuests());
+        assertEquals(0, bedroom1.getNumberOfGuests());
+    }
+
+    @Test
+    public void hotelHasRoomsAvailable() {
+        hotel.addRooms(bedroom1);
+        hotel.addRooms(bedroom2);
+        hotel.addGuest(guest1, bedroom1);
+        assertEquals(bedroom2.getRoomType(), hotel.availableRooms());
     }
 }

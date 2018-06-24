@@ -20,4 +20,6 @@ public enum RoomType {
     public int getRate() {
         return rate;
     }
+
+
 }

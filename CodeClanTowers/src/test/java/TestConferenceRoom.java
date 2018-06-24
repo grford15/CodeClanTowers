@@ -10,7 +10,7 @@ public class TestConferenceRoom {
 
     @Before
     public void setUp() throws Exception {
-        conferenceRoom = new ConferenceRoom("Peter Shirtliff", 100);
+        conferenceRoom = new ConferenceRoom("Peter Shirtliff", 100, 100);
         guest1 = new Guest("Greg", 200);
     }
 
@@ -26,12 +26,12 @@ public class TestConferenceRoom {
 
     @Test
     public void roomHasNoGuests(){
-        assertEquals(0, conferenceRoom.getGuests());
+        assertEquals(0, conferenceRoom.getNumberOfGuests());
     }
 
     @Test
     public void roomCanAddGuest() {
         conferenceRoom.addGuest(guest1);
-        assertEquals(1, conferenceRoom.getGuests());
+        assertEquals(1, conferenceRoom.getNumberOfGuests());
     }
 }

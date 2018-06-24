@@ -10,8 +10,13 @@ public class TestBedroom {
 
     @Before
     public void setUp() throws Exception {
-        bedroom = new Bedroom(401, RoomType.SINGLE);
+        bedroom = new Bedroom(401, RoomType.SINGLE, 1);
         guest1 = new Guest("Greg", 100);
+    }
+
+    @Test
+    public void roomHasCapacity() {
+        assertEquals(1, bedroom.getCapacity());
     }
 
     @Test
@@ -32,7 +37,7 @@ public class TestBedroom {
     @Test
     public void roomCanAddGuest(){
         bedroom.addGuest(guest1);
-        assertEquals(1, bedroom.getGuests());
+        assertEquals(1, bedroom.getNumberOfGuests());
     }
 
 

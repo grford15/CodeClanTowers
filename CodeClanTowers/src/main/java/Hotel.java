@@ -29,4 +29,11 @@ public class Hotel {
         }
 
     }
+
+    public String availableRooms() {
+        for(Room bedroom : this.rooms)
+            if (bedroom.getNumberOfGuests() < 1) {
+                return ((Bedroom) bedroom).getRoomType();
+            }
+        return "No available rooms";}
 }
