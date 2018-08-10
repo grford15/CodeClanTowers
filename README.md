@@ -1,39 +1,32 @@
 # CodeClanTowers
 
-Weekend Homework - CodeClan Towers
 You are being asked to model a hotel. This hotel will contain a collection of rooms of different types (e.g. bedrooms, conference rooms, dining rooms).
 
 Each room will have at least a capacity and a collection of guests.
 
-MVP
-Create an abstract Room superclass which will contain the properties/methods common to all Rooms.
 
-Create different types of rooms which inherit from the Room superclass and have properties/methods of their own. (HINT: you may wish to use an enum for the bedroom types with each entry having a value for the room capacity)
+## MVP
 
-Bedroom, which will have a room number, a type e.g. Single/Double, and nightly rate.
+1. Create an abstract `Room` superclass which will contain the properties/methods common to all Rooms.
 
-ConferenceRoom, which will have a name and a daily rate.
+2. Create different types of rooms which inherit from the `Room` superclass and have properties/methods of their own. (___HINT:___ you may wish to use an enum for the bedroom types with each entry having a value for the room capacity)
 
-Bedrooms and ConferenceRooms will be chargeable while others (e.g. dining rooms) may not.
+  - `Bedroom`, which will have a room number, a type e.g. Single/Double,  and nightly rate.
 
-Create a Guest class so that guests can be checked in/out of rooms.
+  - `ConferenceRoom`, which will have a name and a daily rate.
 
-Create a Hotel class, which has collections of rooms of different types.
+  - `Bedroom`s and `ConferenceRoom`s will be chargeable while others (e.g. dining rooms) may not.
 
-The hotel will be able check guests in/out of rooms.
+3. Create a `Guest` class so that guests can be checked in/out of rooms.
 
-The hotel will be able to get a list of guest(s), if any, checked into a particular room.
+4. Create a `Hotel` class, which has collections of rooms of different types.
 
-Possible Extensions
-Add functionality to the hotel so it can see a list of vacant bedrooms.
-Add functionality to check in guests to bedrooms for a number of nights.
-Any other extensions you may wish to add.
-Remember
-Use TDD, with separate test files for each class.
+5. The hotel will be able check guests in/out of rooms.
 
-PDA Reminder
-Remember to gather evidence for your PDA this week. This should only take 5 minutes:
+6. The hotel will be able to get a list of guest(s), if any, checked into a particular room.
 
-Go to your PDA Checklist
+### Possible Extensions
 
-Submit your PDA evidence (screenshots, etc.) to your own PDA repo
+1. Add functionality to the hotel so it can see a list of vacant bedrooms.
+2. Add functionality to check in guests to bedrooms for a number of nights.
+3. Any other extensions you may wish to add.
